@@ -1,7 +1,9 @@
 <template>
   <div>
     <input type="text" class="input" :value="value" @input="input" />
-    <small>grand child: {{ value }}</small>
+    <div>
+      <small>grand child: {{ value }}</small>
+    </div>
   </div>
 </template>
 

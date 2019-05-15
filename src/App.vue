@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container mt-5">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 mb-4">
         <h1>input component sample</h1>
       </div>
     </div>
