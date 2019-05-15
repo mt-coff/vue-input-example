@@ -1,29 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div id="app" class="container p-5">
+    <div class="row">
+      <div class="col">
+        <parent-a />
+      </div>
+      <div class="col">hi</div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import ParentA from "@/components/A/ParentA.vue";
 
 export default Vue.extend({
   name: "app",
   components: {
-    HelloWorld
+    ParentA
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
