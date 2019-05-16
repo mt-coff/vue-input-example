@@ -1,29 +1,55 @@
-# vue-cc-input
+# vue-input-example
 
-## Project setup
-```
-yarn install
+This repo is sample.
+
+## Emit pattern
+
+`v-model` is available.
+
+```html
+<template>
+  <input type="text" :value="value" @input="handleInput" />
+</template>
+
+<script>
+  import Vue from "vue";
+
+  export default Vue.extend({
+    props: {
+      value: {
+        type: String
+      }
+    },
+    methods: {
+      handleInput(event) {
+        this.$emit("input", event.currentTarget.value);
+      }
+    }
+  });
+</script>
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Props pattern
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+`v-model` is not available.
 
-### Run your tests
-```
-yarn run test
-```
+```html
+<template>
+  <input type="text" class="input" :value="value" @input="input" />
+</template>
 
-### Lints and fixes files
-```
-yarn run lint
-```
+<script>
+  import Vue from "vue";
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  export default Vue.extend({
+    props: {
+      value: {
+        type: String
+      },
+      input: {
+        type: Function
+      }
+    }
+  });
+</script>
+```
